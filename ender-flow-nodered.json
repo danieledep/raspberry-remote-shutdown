@@ -1,0 +1,343 @@
+[
+    {
+        "id": "37d7f76b.8d69f8",
+        "type": "tab",
+        "label": "Ender",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "ce904bf6.d38e78",
+        "type": "mqtt in",
+        "z": "37d7f76b.8d69f8",
+        "name": "Octoprint Print Done",
+        "topic": "octoPrint/event/PrintDone/#",
+        "qos": "0",
+        "datatype": "utf8",
+        "broker": "9d9e712bf60b8c81",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 420,
+        "y": 540,
+        "wires": [
+            [
+                "179c7e9a.b21511"
+            ]
+        ]
+    },
+    {
+        "id": "32f3f58d.044a4a",
+        "type": "debug",
+        "z": "37d7f76b.8d69f8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1130,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "63dd5bc4.c0e4e4",
+        "type": "mqtt out",
+        "z": "37d7f76b.8d69f8",
+        "name": "",
+        "topic": "ender/mains",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "9d9e712bf60b8c81",
+        "x": 1080,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "179c7e9a.b21511",
+        "type": "function",
+        "z": "37d7f76b.8d69f8",
+        "name": "OFF",
+        "func": "msg.payload=\"OFF\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 540,
+        "wires": [
+            [
+                "32f3f58d.044a4a",
+                "63dd5bc4.c0e4e4",
+                "3e8e02a8.2fed9e"
+            ]
+        ]
+    },
+    {
+        "id": "edc56e9f.7c54e",
+        "type": "inject",
+        "z": "37d7f76b.8d69f8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "ON",
+        "payloadType": "str",
+        "x": 550,
+        "y": 200,
+        "wires": [
+            [
+                "58e9dfb3.67c4c"
+            ]
+        ]
+    },
+    {
+        "id": "58e9dfb3.67c4c",
+        "type": "mqtt out",
+        "z": "37d7f76b.8d69f8",
+        "name": "",
+        "topic": "ender/switch/mains/command",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "9d9e712bf60b8c81",
+        "x": 1120,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "51802b11.d3bb54",
+        "type": "debug",
+        "z": "37d7f76b.8d69f8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 890,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "becb66e0.56c8c8",
+        "type": "function",
+        "z": "37d7f76b.8d69f8",
+        "name": "OFF",
+        "func": "msg.payload=\"OFF\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 600,
+        "wires": [
+            [
+                "51802b11.d3bb54",
+                "e25b5160.5c861"
+            ]
+        ]
+    },
+    {
+        "id": "d417e411.4b1e38",
+        "type": "mqtt in",
+        "z": "37d7f76b.8d69f8",
+        "name": "Print Progress",
+        "topic": "octoPrint/progress/printing/#",
+        "qos": "0",
+        "datatype": "utf8",
+        "broker": "9d9e712bf60b8c81",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 400,
+        "y": 600,
+        "wires": [
+            [
+                "becb66e0.56c8c8"
+            ]
+        ]
+    },
+    {
+        "id": "d7cd07af.9d31c8",
+        "type": "debug",
+        "z": "37d7f76b.8d69f8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1130,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "d6666d50.e1a2c",
+        "type": "inject",
+        "z": "37d7f76b.8d69f8",
+        "name": "OFF RPI",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "OFF",
+        "payloadType": "str",
+        "x": 560,
+        "y": 360,
+        "wires": [
+            [
+                "3e8e02a8.2fed9e"
+            ]
+        ]
+    },
+    {
+        "id": "3e8e02a8.2fed9e",
+        "type": "mqtt out",
+        "z": "37d7f76b.8d69f8",
+        "name": "",
+        "topic": "octoprint/shutdown",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "9d9e712bf60b8c81",
+        "x": 1080,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "70ca460f.6cb348",
+        "type": "inject",
+        "z": "37d7f76b.8d69f8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "OFF",
+        "payloadType": "str",
+        "x": 550,
+        "y": 280,
+        "wires": [
+            [
+                "58e9dfb3.67c4c"
+            ]
+        ]
+    },
+    {
+        "id": "e25b5160.5c861",
+        "type": "timeout",
+        "z": "37d7f76b.8d69f8",
+        "name": "My Timeout",
+        "outtopic": "Off",
+        "outsafe": "",
+        "outwarning": "",
+        "outunsafe": "Nexz z level",
+        "warning": "10",
+        "timer": "600",
+        "repeat": false,
+        "again": true,
+        "x": 850,
+        "y": 600,
+        "wires": [
+            [
+                "d7cd07af.9d31c8",
+                "63dd5bc4.c0e4e4"
+            ]
+        ]
+    },
+    {
+        "id": "bb68828049306b0c",
+        "type": "inject",
+        "z": "37d7f76b.8d69f8",
+        "name": "OFF (30s DELAY)",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "OFF",
+        "payloadType": "str",
+        "x": 510,
+        "y": 440,
+        "wires": [
+            [
+                "63dd5bc4.c0e4e4"
+            ]
+        ]
+    },
+    {
+        "id": "9d9e712bf60b8c81",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "octopi.local",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    }
+]
