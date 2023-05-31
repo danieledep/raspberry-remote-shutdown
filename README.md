@@ -17,8 +17,16 @@
 
 ## Installation 
 
+Use Raspberry Pi Imager to install on the microSD the Raspbian OS with preinstalled Octoprint
+
+Ssh into the Raspberry Pi, if you kept the default settings you just will   
+``` ssh octoprint@octopi.local ```
+
 To install everything via install.sh download the folder and ``` cd ``` into it:   
-``` cd /home/pi/raspberry-remote-shutdown ```   
+``` cd /home/pi/raspberry-remote-shutdown ``` 
+
+Install desktop environment to use VNC  
+`sudo /home/octoprint/scripts/install-desktop `
 
 Make the script executable:   
 ``` chmod +x install.sh ```   
