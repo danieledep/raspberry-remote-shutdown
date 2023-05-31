@@ -28,6 +28,15 @@ To install everything via install.sh download the folder and ``` cd ``` into it:
 Install desktop environment to use VNC  
 `sudo /home/octoprint/scripts/install-desktop `
 
+Install vnc  
+` sudo apt install realvnc-vnc-server realvnc-vnc-viewer `
+
+Set Desktop gui to boot at startup and set the resolution at least at 1280 x 720   
+` sudo raspi-config `
+
+Install Chromium   
+`sudo apt-get install chromium-browser --yes `
+
 Make the script executable:   
 ``` chmod +x install.sh ```   
 
