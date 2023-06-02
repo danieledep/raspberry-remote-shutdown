@@ -43,8 +43,11 @@ Set Desktop gui to boot at startup and set the resolution at least at 1280 x 720
 Install Chromium   
 `sudo apt-get install chromium-browser --yes `
 
+Attach a screen, keyboard and mouse to the Raspberry 
+
 Open Esphome web interface  
 ` esphome dashboard /config `
+ 
  
 
 ## Testing MQTT
