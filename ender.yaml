@@ -2,8 +2,6 @@ esphome:
   name: ender
   platform: ESP8266
   board: esp01_1m
-  arduino_version: 2.5.1
-  # https://github.com/esphome/issues/issues/1386#issuecomment-699654564
 
 wifi:
   ssid: !secret wifi_ssid
