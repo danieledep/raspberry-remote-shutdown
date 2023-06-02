@@ -22,14 +22,20 @@ Use Raspberry Pi Imager to install on the microSD the Raspbian OS with preinstal
 Ssh into the Raspberry Pi, if you kept the default settings you just will   
 ``` ssh octoprint@octopi.local ```
 
-To install everything via install.sh download the folder and ``` cd ``` into it:   
+Download the repo from github via https   
+` git clone https://github.com/danieledep/raspberry-remote-shutdown.git `
+
+To install everything via `install.sh` go into the downloaded folder:   
 ``` cd /home/pi/raspberry-remote-shutdown ``` 
 
-Install desktop environment to use VNC  
-`sudo /home/octoprint/scripts/install-desktop `
+Make the script executable:   
+``` chmod +x install.sh ```   
 
-Install vnc  
-` sudo apt install realvnc-vnc-server realvnc-vnc-viewer `
+Run the script:    
+``` sudo ./install.sh ```  
+
+Install desktop environment to use esphome and nodered on the Raspberry  
+`sudo /home/octoprint/scripts/install-desktop `
 
 Set Desktop gui to boot at startup and set the resolution at least at 1280 x 720   
 ` sudo raspi-config `
@@ -37,11 +43,9 @@ Set Desktop gui to boot at startup and set the resolution at least at 1280 x 720
 Install Chromium   
 `sudo apt-get install chromium-browser --yes `
 
-Make the script executable:   
-``` chmod +x install.sh ```   
-
-Run the script:    
-``` sudo ./install.sh ```   
+Open Esphome web interface  
+` esphome dashboard /config `
+ 
 
 ## Testing MQTT
 
