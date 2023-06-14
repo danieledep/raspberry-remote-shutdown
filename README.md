@@ -57,9 +57,9 @@ Create a project name `ender` and copy the content of `ender.yaml` into the file
 
 Hit **Save** and then **Install**
 
-> ⚠️ Newer Raspberry Pi with installed 64bit OS might need to edit their `config.txt` to compile the binaries:  
+> ⚠️ Newer Raspberry Pi with installed 64bit OS might need to disable temporarely the 64 bit capabilities at boot time, in order to compile the binaries due to compatibility issues with Platformio tooling. To do so edit the `config.txt` :  
 > ` sudo nano /boot/config.txt`   
-> add to the part named `[pi4]` a new line like this
+> add to the part titled `[pi4]` a new line like this
 > ```
 > [pi4]   
 > arm_64bit=0 
