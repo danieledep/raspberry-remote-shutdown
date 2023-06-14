@@ -26,13 +26,13 @@ Download the repo from github via https
 ` git clone https://github.com/danieledep/raspberry-remote-shutdown.git `
 
 To install everything via `install.sh` go into the downloaded folder:   
-``` cd /home/pi/raspberry-remote-shutdown ``` 
+` cd /home/pi/raspberry-remote-shutdown ` 
 
 Make the script executable:   
-``` chmod +x install.sh ```   
+` chmod +x install.sh `   
 
 Run the script:    
-``` sudo ./install.sh ```  
+` sudo ./install.sh `  
 
 Install desktop environment to use esphome and nodered on the Raspberry  
 `sudo /home/octoprint/scripts/install-desktop `
@@ -45,8 +45,26 @@ Install Chromium
 
 Attach a screen, keyboard and mouse to the Raspberry 
 
-Open Esphome web interface  
-` esphome dashboard /config `
+Go into the project folder:   
+` cd /home/pi/raspberry-remote-shutdown ` 
+
+Open Esphome web interface, use sudo to have write permission for `secrets.yaml`    
+` sudo esphome dashboard /config `
+
+Press on **Secrets** to save wifi configuration
+
+Create a project name `ender` and copy the content of `ender.yaml` into the file  
+
+Hit **Save** and then **Install**
+
+> ⚠️ Newer Raspberry Pi with installed 64bit OS might need to edit their `config.txt` to compile the binaries:  
+> ` sudo nano /boot/config.txt`   
+> add to the part named `[pi4]` a new line like this
+> ```
+> [pi4]   
+> arm_64bit=0 
+> ```
+
  
  
 
