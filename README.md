@@ -65,6 +65,8 @@ Hit **Save** and then **Install**
 > arm_64bit=0 
 > ```
 
+Open NodeRED at `octopi.local:1880` import our flow `ender-flow-nodered.json` and click **Deploy**
+
  
  
 
