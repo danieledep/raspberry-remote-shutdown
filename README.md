@@ -4,17 +4,6 @@
  - [Video Tutorial](https://youtu.be/WR0WdTBQJGo)   
  - [Original repo](https://github.com/SensorsIot/Raspberry-remote-shutdown)   
 
-## Resources
-
-- [D2XX Drivers - FTDI](https://ftdichip.com/drivers/d2xx-drivers/)
-- [Sonoff – $5 WiFi Wireless Smart Switch Introduction](https://randomnerdtutorials.com/sonoff-5-wifi-wireless-smart-switch-introduction/)
-- [How to Flash a Custom Firmware to Sonoff](https://randomnerdtutorials.com/how-to-flash-a-custom-firmware-to-sonoff/)
-- [Reprogram Sonoff Smart Switch with Web Server](https://randomnerdtutorials.com/reprogram-sonoff-smart-switch-with-web-server/)
-- [Install Mosquitto MQTT Broker on Raspberry Pi](https://randomnerdtutorials.com/how-to-install-mosquitto-broker-on-raspberry-pi/)
-- [Testing Mosquitto Broker and Client on Raspberry Pi](https://randomnerdtutorials.com/testing-mosquitto-broker-and-client-on-raspbbery-pi/)
-- [Using ESPHome With Sonoff Basic](https://esphome.io/devices/sonoff_basic.html)
-- [Buck converters: Quieten your 3D printer with a Noctua fan & directly power your Pi](https://www.youtube.com/watch?v=yW9ovo9CHi0)
-
 ## Installation 
 
 Use Raspberry Pi Imager to install on the microSD the Raspbian OS with preinstalled Octoprint
@@ -81,5 +70,17 @@ To turn off:
 ``` mosquitto_pub -d -t ender/switch/mains/command -m "off" ```   
 
 To turn off after 30 seconds delay:   
-``` mosquitto_pub -d -t ender/mains -m "off" ```   
+``` mosquitto_pub -d -t ender/mains -m "off" ```  
+
+## Resources
+
+- [D2XX Drivers - FTDI](https://ftdichip.com/drivers/d2xx-drivers/)
+- [Sonoff – $5 WiFi Wireless Smart Switch Introduction](https://randomnerdtutorials.com/sonoff-5-wifi-wireless-smart-switch-introduction/)
+- [How to Flash a Custom Firmware to Sonoff](https://randomnerdtutorials.com/how-to-flash-a-custom-firmware-to-sonoff/)
+- [Reprogram Sonoff Smart Switch with Web Server](https://randomnerdtutorials.com/reprogram-sonoff-smart-switch-with-web-server/)
+- [Install Mosquitto MQTT Broker on Raspberry Pi](https://randomnerdtutorials.com/how-to-install-mosquitto-broker-on-raspberry-pi/)
+- [Testing Mosquitto Broker and Client on Raspberry Pi](https://randomnerdtutorials.com/testing-mosquitto-broker-and-client-on-raspbbery-pi/)
+- [Using ESPHome With Sonoff Basic](https://esphome.io/devices/sonoff_basic.html)
+- [Buck converters: Quieten your 3D printer with a Noctua fan & directly power your Pi](https://www.youtube.com/watch?v=yW9ovo9CHi0)
+ 
 
