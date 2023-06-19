@@ -66,7 +66,9 @@ listener 1883
 allow_anonymous true
 ```
  save the file and restart Mosquitto for the changes to take effect.   
-`sudo systemctl restart mosquitto`
+`sudo systemctl restart mosquitto`   
+
+Open Octoprint and install the **MQTT** plugin
  
 
 ## Testing MQTT
