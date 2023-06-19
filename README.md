@@ -37,8 +37,10 @@ Attach a screen, keyboard and mouse to the Raspberry
 Go into the project folder:   
 ` cd /home/pi/raspberry-remote-shutdown ` 
 
-Open Esphome web interface, use sudo to have write permission for `secrets.yaml`    
+Start up Esphome, use sudo to have write permission for `secrets.yaml`    
 ` sudo esphome dashboard /config `
+
+Open Esphome web server at `octopi.local:6052`
 
 Press on **Secrets** to save wifi configuration
 
@@ -56,7 +58,15 @@ Hit **Save** and then **Install**
 
 Open NodeRED at `octopi.local:1880` import our flow `ender-flow-nodered.json` and click **Deploy**
 
- 
+Finally let's enable remote access to the MQTT broker without requiring authentication. Open the configuration file  
+` sudo nano /boot/config.txt`   
+At the end of the file add these two lines:  
+```
+listener 1883 
+allow_anonymous true
+```
+ save the file and restart Mosquitto for the changes to take effect.   
+`sudo systemctl restart mosquitto`
  
 
 ## Testing MQTT
