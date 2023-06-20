@@ -6,7 +6,7 @@
 
 ## Installation 
 
-Use Raspberry Pi Imager to install on the microSD the Raspbian OS with preinstalled Octoprint
+Use **Raspberry Pi Imager** to install on the microSD the Raspbian OS with preinstalled **Octoprint**
 
 Ssh into the Raspberry Pi, if you kept the default settings you just will   
 ``` ssh octoprint@octopi.local ```
@@ -29,7 +29,7 @@ Install desktop environment to use esphome and nodered on the Raspberry
 Set Desktop gui to boot at startup and set the resolution at least at 1280 x 720   
 ` sudo raspi-config `
 
-Install Chromium   
+Install **Chromium**   
 `sudo apt-get install chromium-browser --yes `
 
 Attach a screen, keyboard and mouse to the Raspberry 
@@ -40,7 +40,7 @@ Go into the project folder:
 Start up Esphome, use sudo to have write permission for `secrets.yaml`    
 ` sudo esphome dashboard /config `
 
-Open Esphome web server at `octopi.local:6052`
+Open **Esphome** web ui at `octopi.local:6052`
 
 Press on **Secrets** to save wifi configuration
 
@@ -56,9 +56,9 @@ Hit **Save** and then **Install**
 > arm_64bit=0 
 > ```
 
-Open NodeRED at `octopi.local:1880` import our flow `ender-flow-nodered.json` and click **Deploy**
+Open **NodeRED** at `octopi.local:1880` import our flow `ender-flow-nodered.json` and click **Deploy**
 
-Finally let's enable remote access to the MQTT broker without requiring authentication. Open the configuration file  
+Finally let's enable remote access to the **MQTT broker** without requiring authentication. Open the configuration file  
 ` sudo nano /boot/config.txt`   
 At the end of the file add these two lines:  
 ```
