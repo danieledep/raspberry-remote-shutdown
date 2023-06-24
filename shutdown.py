@@ -36,5 +36,5 @@ while True:
    if len(messages)>0:
       m=messages.pop(0)
       print("shutdown")
-      client.publish("ender/mains", payload=None, qos=0, retain=False)
+      client.publish("sonoff/mains", payload=None, qos=0, retain=False)
       os.system("sudo shutdown now")
