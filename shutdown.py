@@ -22,7 +22,7 @@ def on_connect(client, userdata, flags,rc):
 
 ## MQTT
 messages=[]
-sub_topic="octoprint/shutdown"
+sub_topic="octoprint/shutdownscript"
 client= mqtt.Client("Octoprint")
 ######
 client.on_message=on_message
@@ -36,5 +36,5 @@ while True:
    if len(messages)>0:
       m=messages.pop(0)
       print("shutdown")
-      client.publish("sonoff/mains", payload=None, qos=0, retain=False)
+      ## client.publish("sonoff/mains", payload=None, qos=0, retain=False)
       os.system("sudo shutdown now")
