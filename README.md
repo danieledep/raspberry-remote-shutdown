@@ -56,7 +56,7 @@ Press on **Secrets** to save wifi configuration
 
 Create a project name `sonoff` and copy the content of `sonoff.yaml` into the file  
 
-Hit **Save** and then **Install**
+Hit **Save** and then **Install.** The first time you flash a new firmware you'll need to keep pressed the physical button of the Sonoff. 
 
 > ⚠️ Newer Raspberry Pi with installed 64bit OS might need to disable temporarely the 64 bit capabilities at boot time, in order to compile the binaries due to compatibility issues with Platformio tooling. To do so edit the `config.txt` :  
 > ` sudo nano /boot/config.txt`   
