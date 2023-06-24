@@ -49,6 +49,17 @@ binary_sensor:
       number: GPIO0
     on_press:
       then:
-        - logger.log: "Button pressed"
-        - switch.toggle: mains
+        - if:
+            condition:
+              switch.is_on: mains
+            then:
+              - logger.log: "shutting down in 30 seconds"
+              - mqtt.publish:
+                  topic: octoprint/shutdown
+                  payload: "Raspberry shutdown"
+              - delay: 30s
+              - switch.turn_off: mains
+            else:
+              - logger.log: "start up mains"
+              - switch.turn_on: mains
 
