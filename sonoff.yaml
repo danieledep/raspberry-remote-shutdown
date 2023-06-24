@@ -54,7 +54,6 @@ binary_sensor:
             condition:
               switch.is_on: mains
             then:
-              - logger.log: "shutting down in 30 seconds"
               - mqtt.publish:
                   topic: octoprint/shutdown
                   payload: "OFF"
