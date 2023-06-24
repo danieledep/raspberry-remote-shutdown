@@ -38,7 +38,9 @@ Set Desktop gui to boot at startup and set the resolution at least at 1280 x 720
 Install **Chromium**   
 `sudo apt-get install chromium-browser --yes `
 
-Attach a screen, keyboard and mouse to the Raspberry 
+Attach a screen, keyboard and mouse to the Raspberry Pi
+
+Install the [D2XX Drivers](https://ftdichip.com/drivers/d2xx-drivers/) for using the FTDI chips from the Raspberry Pi
 
 Go into the project folder:   
 ` cd /home/pi/raspberry-remote-shutdown ` 
