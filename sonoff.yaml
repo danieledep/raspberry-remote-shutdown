@@ -58,7 +58,7 @@ binary_sensor:
               - mqtt.publish:
                   topic: octoprint/shutdown
                   payload: "OFF"
-              - delay: 30s
+              - delay: 60s
               - switch.turn_off: mains
             else:
               - logger.log: "start up mains"
