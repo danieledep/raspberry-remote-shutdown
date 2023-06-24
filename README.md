@@ -54,7 +54,7 @@ Open **Esphome** web ui at `octopi.local:6052`
 
 Press on **Secrets** to save wifi configuration
 
-Create a project name `ender` and copy the content of `ender.yaml` into the file  
+Create a project name `sonoff` and copy the content of `sonoff.yaml` into the file  
 
 Hit **Save** and then **Install**
 
@@ -66,7 +66,7 @@ Hit **Save** and then **Install**
 > arm_64bit=0 
 > ```
 
-Open **NodeRED** at `octopi.local:1880` import our flow `ender-flow-nodered.json` and click **Deploy**
+Open **NodeRED** at `octopi.local:1880` import our flow `nodered-flow.json` and click **Deploy**
 
 Finally let's enable remote access to the **MQTT broker** without requiring authentication. Open the configuration file  
 ` sudo nano /boot/config.txt`   
@@ -89,13 +89,13 @@ Check the **systemd** services are enabled and running
 From terminal send MQTT messages to the broker which sends them to NodeRED client.    
 
 To turn on:   
-``` mosquitto_pub -d -t ender/switch/mains/command -m "on" ```   
+``` mosquitto_pub -d -t sonoff/switch/mains/command -m "on" ```   
 
 To turn off:   
-``` mosquitto_pub -d -t ender/switch/mains/command -m "off" ```   
+``` mosquitto_pub -d -t sonoff/switch/mains/command -m "off" ```   
 
 To turn off after 30 seconds delay:   
-``` mosquitto_pub -d -t ender/mains -m "off" ```  
+``` mosquitto_pub -d -t sonoff/mains -m "off" ```  
 
 ## Resources
 
