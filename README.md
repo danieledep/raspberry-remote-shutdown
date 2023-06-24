@@ -81,7 +81,10 @@ Open Octoprint and install the **MQTT** plugin
 
 ## Testing MQTT
 
-From terminal send MQTT messages to the broker which sends them to ESPHome client.    
+Check the **systemd** services are enabled and running   
+`systemctl list-unit-files`
+
+From terminal send MQTT messages to the broker which sends them to NodeRED client.    
 
 To turn on:   
 ``` mosquitto_pub -d -t ender/switch/mains/command -m "on" ```   
