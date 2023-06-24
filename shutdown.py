@@ -4,6 +4,7 @@ import sys
 import paho.mqtt.client as mqtt
 import time
 broker="octopi.local"
+port=1833
 
 #define callback
 def on_message(client, userdata, message):
@@ -21,14 +22,14 @@ def on_connect(client, userdata, flags,rc):
 
 ## MQTT
 messages=[]
-sub_topic="octoprint/shutdown/#"
+sub_topic="octoprint/shutdown"
 client= mqtt.Client("Octoprint")
 ######
 client.on_message=on_message
 client.on_connect=on_connect
 ## client.username_pw_set(username="admin", password="admin")
 client.connected_flag=False
-client.connect(broker)#connect
+client.connect(broker, port=port)#connect
 while True:
    client.loop(0.01)
    time.sleep(1)
