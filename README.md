@@ -1,8 +1,14 @@
 # Raspberry remote shutdown
  
-
  - [Video Tutorial](https://youtu.be/WR0WdTBQJGo)   
- - [Original repo](https://github.com/SensorsIot/Raspberry-remote-shutdown)   
+ - [Original repo](https://github.com/SensorsIot/Raspberry-remote-shutdown)
+
+## Components
+
+- Raspberry Pi 4
+- Sonoff Basic RF R2 v1.3
+- USB to Serial adapter with FTDI FT232RL chip, like this one: [DSD TECH SH-U09C](https://www.amazon.com/DSD-TECH-Adapter-FT232RL-Compatible/dp/B07BBPX8B8/ref=sr_1_3?crid=T37WPRBNX2BY)
+- Momentary switch button
 
 ## Installation 
 
@@ -93,6 +99,7 @@ To turn off after 30 seconds delay:
 - [Install Mosquitto MQTT Broker on Raspberry Pi](https://randomnerdtutorials.com/how-to-install-mosquitto-broker-on-raspberry-pi/)
 - [Testing Mosquitto Broker and Client on Raspberry Pi](https://randomnerdtutorials.com/testing-mosquitto-broker-and-client-on-raspbbery-pi/)
 - [Using ESPHome With Sonoff Basic](https://esphome.io/devices/sonoff_basic.html)
+- [GPIO Binary Sensor](https://esphome.io/components/binary_sensor/gpio.html)
 - [Buck converters: Quieten your 3D printer with a Noctua fan & directly power your Pi](https://www.youtube.com/watch?v=yW9ovo9CHi0)
  
 
