@@ -56,7 +56,7 @@ binary_sensor:
               - logger.log: "shutting down in 30 seconds"
               - mqtt.publish:
                   topic: octoprint/shutdown
-                  payload: "Raspberry shutdown"
+                  payload: "OFF"
               - delay: 30s
               - switch.turn_off: mains
             else:
