@@ -41,3 +41,14 @@ status_led:
   pin:
     number: GPIO13
     inverted: yes
+
+binary_sensor:
+  - platform: gpio
+    name: button
+    pin:
+      number: GPIO0
+    on_press:
+      then:
+        - logger.log: "Button pressed"
+        - switch.toggle: mains
+
