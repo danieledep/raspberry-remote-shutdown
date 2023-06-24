@@ -3,7 +3,7 @@ Description=Shutdown
 After=network.target
 
 [Service]
-User=octopi
+User=octoprint
 ExecStart=/usr/bin/python -u /home/octoprint/raspberry-remote-shutdown/shutdown.py
 StandardOutput=inherit
 StandardError=inherit
