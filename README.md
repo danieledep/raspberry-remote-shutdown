@@ -86,7 +86,7 @@ Open Octoprint and install the **MQTT** plugin
 Check the **systemd** services are enabled and running   
 `systemctl list-unit-files`
 
-From terminal send MQTT messages to the broker which sends them to NodeRED client.    
+From terminal send MQTT messages to the NodeRED client which sends them to the Sonoff.    
 
 To turn on:   
 ``` mosquitto_pub -d -t sonoff/switch/mains/command -m "on" ```   
