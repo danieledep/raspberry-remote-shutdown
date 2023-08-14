@@ -47,14 +47,9 @@ Install the [D2XX Drivers](https://ftdichip.com/drivers/d2xx-drivers/) for using
 Go into the project folder:   
 ` cd /raspberry-remote-shutdown ` 
 
-> ⚠️ Last time I tryed installing **Esphome** with `pip` it failed to install `cryptography`,    
-> because of missing **Rust** toolchains, this fixed it:  
-> ```
-> curl https://sh.rustup.rs -sSf | sh  
-> source $HOME/.cargo/env
-> python -m pip install --upgrade pip
-> pip install esphome
-> ```
+> ⚠️ Last time I tryed installing **Esphome** with `pip` it failed to install `cryptography`    
+> because of incompatible dependencies, this fixed it:  
+> `sudo pip3 install esphome cryptography==3.3.2`
 
 Start up Esphome, use sudo to have write permission for `secrets.yaml`    
 ` sudo esphome dashboard /config `
