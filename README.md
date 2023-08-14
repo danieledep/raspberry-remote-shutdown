@@ -73,7 +73,7 @@ Hit **Save** and then **Install.** The first time you flash a new firmware you'l
 Open **NodeRED** at `octopi.local:1880` import our flow `nodered-flow.json` and click **Deploy**
 
 Finally let's enable remote access to the **MQTT broker** without requiring authentication. Open the configuration file  
-` sudo nano /boot/config.txt`   
+` sudo nano /etc/mosquitto/mosquitto.conf`   
 At the end of the file add these two lines:  
 ```
 listener 1883 
