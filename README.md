@@ -22,8 +22,8 @@ Ssh into the Raspberry Pi, if you kept the default settings you just will
 Download the repo from github via https   
 ` git clone https://github.com/danieledep/raspberry-remote-shutdown.git `
 
-To install everything via `install.sh` go into the downloaded folder:   
-` cd /home/pi/raspberry-remote-shutdown ` 
+Go into the downloaded folder:   
+` cd /raspberry-remote-shutdown ` 
 
 Make the script executable:   
 ` chmod +x install.sh `   
