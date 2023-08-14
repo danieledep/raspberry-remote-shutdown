@@ -45,7 +45,7 @@ Attach a screen, keyboard and mouse to the Raspberry Pi
 Install the [D2XX Drivers](https://ftdichip.com/drivers/d2xx-drivers/) for using the FTDI chips from the Raspberry Pi
 
 Go into the project folder:   
-` cd /home/pi/raspberry-remote-shutdown ` 
+` cd /raspberry-remote-shutdown ` 
 
 Start up Esphome, use sudo to have write permission for `secrets.yaml`    
 ` sudo esphome dashboard /config `
