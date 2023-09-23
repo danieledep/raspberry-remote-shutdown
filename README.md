@@ -7,7 +7,7 @@
 
 - Raspberry Pi 4
 - Ender 3
-- 2 to 1 XT60 adaptor
+- 2-to-1 XT60 adaptor
 - Sonoff Basic RF R2 v1.3
 - USB to Serial adapter with FTDI FT232RL chip, like this one: [DSD TECH SH-U09C](https://www.amazon.com/DSD-TECH-Adapter-FT232RL-Compatible/dp/B07BBPX8B8/ref=sr_1_3?crid=T37WPRBNX2BY)
 - Momentary switch button
