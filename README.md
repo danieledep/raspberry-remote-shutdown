@@ -82,7 +82,7 @@ allow_anonymous true
  save the file and restart Mosquitto for the changes to take effect.   
 `sudo systemctl restart mosquitto`   
 
-Open Octoprint and install the **MQTT** plugin
+Open Octoprint, install the **MQTT** plugin and tick **Activate event messages**
  
 
 ## Testing MQTT
