@@ -4,7 +4,7 @@ import sys
 import paho.mqtt.client as mqtt
 import time
 broker="octopi.local"
-port=1833
+port=1883
 
 #define callback
 def on_message(client, userdata, message):
