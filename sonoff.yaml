@@ -48,6 +48,8 @@ binary_sensor:
     name: button
     pin:
       number: GPIO0
+    filters:
+      - delayed_on: 10ms
     on_press:
       then:
         - if:
