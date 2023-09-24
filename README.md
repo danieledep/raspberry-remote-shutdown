@@ -23,7 +23,7 @@ Download the repo from github via https
 ` git clone https://github.com/danieledep/raspberry-remote-shutdown.git `
 
 Go into the downloaded folder:   
-` cd /raspberry-remote-shutdown ` 
+` cd raspberry-remote-shutdown/ ` 
 
 Make the script executable:   
 ` chmod +x install.sh `   
@@ -45,7 +45,7 @@ Attach a screen, keyboard and mouse to the Raspberry Pi
 Install the [D2XX Drivers](https://ftdichip.com/drivers/d2xx-drivers/) for using the FTDI chips from the Raspberry Pi
 
 Go into the project folder:   
-` cd /raspberry-remote-shutdown ` 
+` cd raspberry-remote-shutdown/ ` 
 
 > ⚠️ Last time I tryed installing **Esphome** with `pip` it failed to install `cryptography`    
 > because of incompatible dependencies, this fixed it:  
