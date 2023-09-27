@@ -11,6 +11,6 @@ bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/mast
 echo "installing services"
 
 sudo systemctl enable nodered.service
-sudo cp shutdown.service /etc/systemd/system/shutdown.service
-sudo systemctl enable shutdown.service
-sudo systemctl start shutdown.service
+# sudo cp shutdown.service /etc/systemd/system/shutdown.service
+# sudo systemctl enable shutdown.service
+# sudo systemctl start shutdown.service
