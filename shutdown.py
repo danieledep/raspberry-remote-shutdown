@@ -11,7 +11,8 @@ def on_message(client, userdata, message):
     print("message =", msg)
     topic = message.topic
     print("Received message on topic:", topic)
-    # Execute shutdown command here
+    # Execute shutdown command
+    os.system("sudo shutdown now")
 
 def on_connect(client, userdata, flags, rc):
     if rc == 0:
