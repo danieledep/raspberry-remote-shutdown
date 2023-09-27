@@ -97,8 +97,12 @@ allow_anonymous true
 
 Open Octoprint, install the **MQTT** plugin and tick **Activate event messages**
  
+### Notes
 
-## Testing MQTT
+Since I'm running the MQTT Broker directly on the same Raspberry PI that runs Octoprint too, which effectively self-shutdown, I don't need to run the **systemd service**  `shutdown.service`. The service was used by the original author to listen for the MQTT message coming from a different server running the MQTT Broker telling the Raspberry PI running Octoprint to shutdown. But since they both run on the same device I can simply run the **Exec** node from within Node-RED, which upon receiving the `octoprint/shutodwn` MQTT message, it launches the command `sudo shutdown now` to the OS. I still have an updated version of the necessary files and Node-RED nodes in this repository, in case I wanted to change my setup in the future.
+
+
+### Testing MQTT
 
 Check the **systemd** services are enabled and running   
 `systemctl list-unit-files`
@@ -114,7 +118,7 @@ To turn off:
 To turn off after 30 seconds delay:   
 ``` mosquitto_pub -d -t sonoff/mains -m "off" ```  
 
-## Resources
+### Resources
 
 - [D2XX Drivers - FTDI](https://ftdichip.com/drivers/d2xx-drivers/)
 - [Sonoff – $5 WiFi Wireless Smart Switch Introduction](https://randomnerdtutorials.com/sonoff-5-wifi-wireless-smart-switch-introduction/)
