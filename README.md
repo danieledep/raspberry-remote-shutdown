@@ -16,7 +16,9 @@
 
 Use **Raspberry Pi Imager** to install on the microSD the Raspbian OS with preinstalled **Octoprint**
 
-Ssh into the Raspberry Pi, if you kept the default settings you just will   
+Create a new user and login by connecting with a computer in the same network to `http://octopi.local`
+
+After that you will be able to **ssh** into the Raspberry Pi, if you kept the default settings you just will   
 ``` ssh octoprint@octopi.local ```
 
 Download the repo from github via https   
