@@ -118,7 +118,10 @@ To turn off:
 ``` mosquitto_pub -d -t sonoff/switch/mains/command -m "off" ```   
 
 To turn off after 30 seconds delay:   
-``` mosquitto_pub -d -t sonoff/mains -m "off" ```  
+``` mosquitto_pub -d -t sonoff/mains -m "off" ```     
+
+To read log messages from NodeRED 
+`node-red-log`
 
 ### Resources
 
