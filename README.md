@@ -120,8 +120,14 @@ To turn off:
 To turn off after 30 seconds delay:   
 ``` mosquitto_pub -d -t sonoff/mains -m "off" ```     
 
-To read log messages from NodeRED 
+To read log messages from NodeRED in real-time   
 `node-red-log`
+
+To read Mosquitto logs file    
+`sudo cat /var/log/mosquitto/mosquitto.log`
+
+To read NodeRED logs file    
+`sudo cat /var/log/syslog`
 
 ### Resources
 
