@@ -19,25 +19,25 @@ Use **Raspberry Pi Imager** to install on the microSD the Raspbian OS with prein
 Create a new user and login by connecting with a computer in the same network to `http://octopi.local`
 
 After that you will be able to **ssh** into the Raspberry Pi, if you kept the default settings you can just   
-``` ssh octoprint@octopi.local ```
+`ssh octoprint@octopi.local`
 
 Download the repo from github via https   
-` git clone https://github.com/danieledep/raspberry-remote-shutdown.git `
+`git clone https://github.com/danieledep/raspberry-remote-shutdown.git `
 
 Go into the downloaded folder:   
-` cd raspberry-remote-shutdown/ ` 
+`cd raspberry-remote-shutdown/ ` 
 
 Make the script executable:   
-` chmod +x install.sh `   
+`chmod +x install.sh `   
 
 Run the script:    
-` sudo ./install.sh `  
+`sudo ./install.sh `  
 
 Install desktop environment to use esphome and nodered on the Raspberry  
 `sudo /home/octoprint/scripts/install-desktop `
 
 Set Desktop gui to boot at startup and set the resolution at least at 1280 x 720   
-` sudo raspi-config `
+`sudo raspi-config `
 
 Install **Chromium**   
 `sudo apt-get install chromium-browser --yes `
@@ -47,14 +47,14 @@ Attach a screen, keyboard and mouse to the Raspberry Pi
 Install the [D2XX Drivers](https://ftdichip.com/drivers/d2xx-drivers/) for using the FTDI chips from the Raspberry Pi
 
 Go into the project folder:   
-` cd raspberry-remote-shutdown/ ` 
+`cd raspberry-remote-shutdown/ ` 
 
 > ⚠️ Last time I tryed installing **Esphome** with `pip` it failed to install `cryptography`    
 > because of incompatible dependencies, this fixed it:  
 > `sudo pip3 install esphome cryptography==3.3.2`
 
 Start up Esphome, use sudo to have write permission for `secrets.yaml`    
-` sudo esphome dashboard /config `
+`sudo esphome dashboard /config `
 
 Open **Esphome** web ui at `octopi.local:6052`
 
@@ -88,7 +88,7 @@ The first time you flash a new firmware you'll also need to keep pressed the phy
 Open **NodeRED** at `octopi.local:1880` import our flow `nodered-flow.json` and click **Deploy**
 
 Finally let's enable remote access to the **MQTT broker** without requiring authentication. Open the configuration file  
-` sudo nano /etc/mosquitto/mosquitto.conf`   
+`sudo nano /etc/mosquitto/mosquitto.conf`   
 At the end of the file add these two lines:  
 ```
 listener 1883 
@@ -97,7 +97,8 @@ allow_anonymous true
  save the file and restart Mosquitto for the changes to take effect.   
 `sudo systemctl restart mosquitto`   
 
-Open Octoprint, install the **MQTT** plugin and tick **Activate event messages**
+Open Octoprint, install the **MQTT** plugin, tick **Activate event messages**, and let's only keep **Printing events** messages enabled.   
+Add `octopi.local` as the Broker host.
 
 > ⚠️ By default the plugin has the **Enable retain flag** option checked. This is normally the preferred choice but for our setup where the broker shut itself down multiple times, we don't want to have our server turn on and find retained messages from the previous session. 
  
