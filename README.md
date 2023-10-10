@@ -98,6 +98,8 @@ allow_anonymous true
 `sudo systemctl restart mosquitto`   
 
 Open Octoprint, install the **MQTT** plugin and tick **Activate event messages**
+
+> ⚠️ By default the plugin has the **Enable retain flag** option checked. This is normally the preferred choice but for our setup where the broker shut itself down multiple times, we don't want to have our server turn on and find retained messages from the previous session. 
  
 ### Notes
 
